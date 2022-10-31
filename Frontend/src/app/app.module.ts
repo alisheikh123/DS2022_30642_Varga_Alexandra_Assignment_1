@@ -99,7 +99,7 @@ registerLocaleData(localeEn, 'en-EN');
         ProfabricComponentsModule,
         NgbModule,
         RouterModule.forRoot([
-          { path: '', component: MainComponent },
+          { path: '', component: LoginComponent },
           { path: '404', component : NotFoundComponent},
           { path: '', redirectTo: '/', pathMatch: 'full' },
           { path: '**', redirectTo: '/404', pathMatch: 'full'}
