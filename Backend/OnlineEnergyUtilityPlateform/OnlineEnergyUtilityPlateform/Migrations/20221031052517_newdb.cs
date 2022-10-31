@@ -18,7 +18,8 @@ namespace OnlineEnergyUtilityPlateformAPI.Migrations
                     Hours = table.Column<double>(type: "float", nullable: false),
                     EnergyConsumption = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DeviceId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -75,7 +76,8 @@ namespace OnlineEnergyUtilityPlateformAPI.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MaxHEC = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    CreationDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdateDate = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

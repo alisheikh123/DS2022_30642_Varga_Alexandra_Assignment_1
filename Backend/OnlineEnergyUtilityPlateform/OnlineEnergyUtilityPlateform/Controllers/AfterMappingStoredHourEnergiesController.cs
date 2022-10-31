@@ -92,8 +92,8 @@ namespace OnlineEnergyUtilityPlateformAPI.Controllers
         public EntityResponseModel<ReportDtoModel> GetReport(Guid? userId,string? deviceId,DateTime? creationDate)
         {
             var response = new EntityResponseModel<ReportDtoModel>();
-            var date = creationDate.Value.AddMonths(-1);
-           var createdDate = _context.AfterMappingStoredHourEnergy.Where(x => x.UserId == userId && x.DeviceId == Convert.ToInt32(deviceId) && x.CreatedDate.Value.Date==date).ToList();
+            //var date = creationDate.Value.AddMonths(-1);
+           var createdDate = _context.AfterMappingStoredHourEnergy.Where(x => x.UserId == userId && x.DeviceId == Convert.ToInt32(deviceId) && x.CreatedDate.Value.Date== creationDate).ToList();
 
            
                 if (createdDate.Count>0)

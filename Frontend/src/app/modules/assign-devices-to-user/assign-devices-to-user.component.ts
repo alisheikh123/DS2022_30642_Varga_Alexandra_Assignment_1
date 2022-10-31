@@ -1,3 +1,4 @@
+import { DateFormatPipe } from '@/pip/date-format.pipe';
 import { ApiService } from '@/shared/services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -11,9 +12,10 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AssignDevicesToUserComponent implements OnInit {
   users:any;
+  dateTime = new Date();
   devices:any;
   devicetouserForm!:FormGroup
-  constructor(private apiService:ApiService, private toastr: ToastrService) { }
+  constructor(private apiService:ApiService, private toastr: ToastrService,private dateFormatPipe:DateFormatPipe) { }
 
   ngOnInit(): void {
     this.getIntializedForm();
@@ -22,9 +24,10 @@ export class AssignDevicesToUserComponent implements OnInit {
   }
   getIntializedForm(){
     this.devicetouserForm = new FormGroup({
+      id: new FormControl(0),
       userId: new FormControl('', Validators.required),
       deviceId: new FormControl('',  Validators.required),
-      assigningDate: new FormControl('', )
+      assigningDate: new FormControl('')
     });
   }
   getUserName()
@@ -49,22 +52,22 @@ selectDeviceId(event:any){
     deviceId:event.target.value
   })
 }
-onSave(){
-  console.log(this.devicetouserForm)
 
-  if(this.devicetouserForm.valid){
-    this.devicetouserForm.patchValue({
-      assigningDate:moment(this.devicetouserForm.controls['assigningDate'].value).format('YYYY-MM-DD')
-    })
-    this.apiService.servicePost("UserDeviceMappingTbls",this.devicetouserForm.value).then((res:any)=>{
-      if(res !=null){
+onSave(){
+
+  this.devicetouserForm.controls.assigningDate.setValue(this.devicetouserForm.controls.assigningDate.value);
+
+  let date = this.devicetouserForm.get('assigningDate').value;
+     this.devicetouserForm.patchValue({
+        assigningDate:date
+      })
+    debugger
+    if(this.devicetouserForm.valid){
+    this.apiService.servicePost('UserDeviceMappingTbls',this.devicetouserForm.value).then((res:any)=>{
+
       this.toastr.success("Device successfully assigned to user");
-      this.devicetouserForm.reset();
       window.location.reload();
-      }
-      else{
-        this.toastr.warning("Something wrong in form");
-      }
+
     });
   }
 }

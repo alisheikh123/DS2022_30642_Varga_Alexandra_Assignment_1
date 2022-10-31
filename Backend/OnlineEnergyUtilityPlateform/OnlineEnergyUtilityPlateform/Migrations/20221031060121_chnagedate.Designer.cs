@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace OnlineEnergyUtilityPlateformAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221027073259_changehourstable")]
-    partial class changehourstable
+    [Migration("20221031060121_chnagedate")]
+    partial class chnagedate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -196,13 +196,16 @@ namespace OnlineEnergyUtilityPlateformAPI.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("CreationDate")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MaxHEC")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdateDate")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
@@ -289,7 +292,7 @@ namespace OnlineEnergyUtilityPlateformAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("AssigningDate")
+                    b.Property<DateTime?>("AssigningDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("DeviceId")

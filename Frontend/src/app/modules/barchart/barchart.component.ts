@@ -70,7 +70,7 @@ export class BarchartComponent implements OnInit {
           ]
         },
         options: {
-          aspectRatio:2.5
+          aspectRatio:2.3
         }
 
       });

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace OnlineEnergyUtilityPlateformAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221029090432_sjiqj")]
-    partial class sjiqj
+    [Migration("20221031052517_newdb")]
+    partial class newdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -196,8 +196,8 @@ namespace OnlineEnergyUtilityPlateformAPI.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("CreationDate")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -205,8 +205,8 @@ namespace OnlineEnergyUtilityPlateformAPI.Migrations
                     b.Property<string>("MaxHEC")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("UpdateDate")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 

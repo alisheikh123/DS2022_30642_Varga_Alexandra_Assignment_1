@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using LoyallaApi.Context;
 using OnlineEnergyUtilityPlateformAPI.DBModels.Model;
+using Microsoft.AspNetCore.Authorization;
 
 namespace OnlineEnergyUtilityPlateformAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class UserDeviceMappingTblsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -76,8 +78,9 @@ namespace OnlineEnergyUtilityPlateformAPI.Controllers
         // POST: api/UserDeviceMappingTbls
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<UserDeviceMappingTbl>> PostUserDeviceMappingTbl(UserDeviceMappingTbl userDeviceMappingTbl)
+        public async Task<ActionResult<UserDeviceMappingTbl>> PostUserDeviceMappingTbl([FromBody]UserDeviceMappingTbl userDeviceMappingTbl)
         {
+            //userDeviceMappingTbl.AssigningDate.AddMonths(-1);
             _context.UserDeviceMappingTbls.Add(userDeviceMappingTbl);
             await _context.SaveChangesAsync();
 

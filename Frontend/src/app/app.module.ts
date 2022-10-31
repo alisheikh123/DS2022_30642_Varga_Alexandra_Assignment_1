@@ -18,7 +18,7 @@ import {ToastrModule} from 'ngx-toastr';
 import {MessagesComponent} from '@modules/main/header/messages/messages.component';
 import {NotificationsComponent} from '@modules/main/header/notifications/notifications.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {CommonModule, registerLocaleData} from '@angular/common';
+import {CommonModule, DatePipe, registerLocaleData} from '@angular/common';
 import localeEn from '@angular/common/locales/en';
 import {UserComponent} from '@modules/main/header/user/user.component';
 import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.component';
@@ -45,6 +45,7 @@ import { DataTablesModule } from 'angular-datatables';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './common/not-found/not-found.component';
 import { ViewDevicesListComponent } from './modules/View/view-devices-list/view-devices-list.component';
+import { DateFormatPipe } from './pip/date-format.pipe';
 defineCustomElements();
 registerLocaleData(localeEn, 'en-EN');
 
@@ -79,6 +80,7 @@ registerLocaleData(localeEn, 'en-EN');
         ViewUserListComponent,
         NotFoundComponent,
         ViewDevicesListComponent,
+        DateFormatPipe,
 
     ],
     imports: [
@@ -112,7 +114,7 @@ registerLocaleData(localeEn, 'en-EN');
       ReactiveFormsModule
     ],
 
-    providers: [],
+    providers: [DatePipe ,DateFormatPipe],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
