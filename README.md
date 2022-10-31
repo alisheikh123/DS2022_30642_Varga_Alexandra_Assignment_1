@@ -10,6 +10,7 @@ The main purpose to build this Application to :
      2) Client
      
    Responsibilty:
+   
      Admin: 
              - To Create,Read,Delete,Update the User
              - To Create,Read,Delete,Update the Devices
