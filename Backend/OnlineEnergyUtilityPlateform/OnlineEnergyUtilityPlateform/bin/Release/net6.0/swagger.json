@@ -1,0 +1,843 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Online Energy Utility Plateform API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/accounts/Delete/{id}": {
+      "delete": {
+        "tags": [
+          "Accounts"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/accounts/{id}": {
+      "get": {
+        "tags": [
+          "Accounts"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserListDtoEntityResponseModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/accounts/GetUsers": {
+      "get": {
+        "tags": [
+          "Accounts"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserListDtoEntityResponseListModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/accounts/registration": {
+      "post": {
+        "tags": [
+          "Accounts"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserForRegistrationDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/StringEntityResponseListModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/accounts/login": {
+      "post": {
+        "tags": [
+          "Accounts"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserForAuthenticationDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/StringEntityResponseModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/AfterMappingStoredHourEnergies": {
+      "get": {
+        "tags": [
+          "AfterMappingStoredHourEnergies"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AfterMappingStoredHourEnergy"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "AfterMappingStoredHourEnergies"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AfterMappingStoredHourEnergy"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/AfterMappingStoredHourEnergy"
+            }
+          }
+        }
+      }
+    },
+    "/api/AfterMappingStoredHourEnergies/{id}": {
+      "get": {
+        "tags": [
+          "AfterMappingStoredHourEnergies"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/AfterMappingStoredHourEnergy"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "AfterMappingStoredHourEnergies"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/AfterMappingStoredHourEnergy"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "AfterMappingStoredHourEnergies"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AfterMappingStoredHourEnergies/GenerateReport": {
+      "get": {
+        "tags": [
+          "AfterMappingStoredHourEnergies"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "userId",
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "query",
+            "name": "deviceId",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "creationDate",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ReportDtoModelEntityResponseModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/DeviceTbls/GetDevices/{userId}": {
+      "get": {
+        "tags": [
+          "DeviceTbls"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/DeviceTblEntityResponseModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/DeviceTbls": {
+      "get": {
+        "tags": [
+          "DeviceTbls"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DeviceTbl"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "DeviceTbls"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/DeviceTbl"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/DeviceTbl"
+            }
+          }
+        }
+      }
+    },
+    "/api/DeviceTbls/{id}": {
+      "get": {
+        "tags": [
+          "DeviceTbls"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/DeviceTbl"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "DeviceTbls"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/DeviceTbls/updateDevice": {
+      "post": {
+        "tags": [
+          "DeviceTbls"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/DeviceTbl"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/UserDeviceMappingTbls": {
+      "get": {
+        "tags": [
+          "UserDeviceMappingTbls"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserDeviceMappingTbl"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "UserDeviceMappingTbls"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserDeviceMappingTbl"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserDeviceMappingTbl"
+            }
+          }
+        }
+      }
+    },
+    "/api/UserDeviceMappingTbls/{id}": {
+      "get": {
+        "tags": [
+          "UserDeviceMappingTbls"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/UserDeviceMappingTbl"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "UserDeviceMappingTbls"
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/UserDeviceMappingTbl"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "UserDeviceMappingTbls"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AfterMappingStoredHourEnergy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "hours": {
+          "format": "double",
+          "type": "number"
+        },
+        "energyConsumption": {
+          "type": "string"
+        },
+        "deviceId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "createdDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "DeviceTbl": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "maxHEC": {
+          "type": "string"
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "updateDate": {
+          "type": "string"
+        }
+      }
+    },
+    "DeviceTblEntityResponseModel": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "string"
+        },
+        "data": { },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "ReportDtoModelEntityResponseModel": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "string"
+        },
+        "data": { },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "StringEntityResponseListModel": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "StringEntityResponseModel": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "string"
+        },
+        "data": { },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "UserDeviceMappingTbl": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "deviceId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "assigningDate": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "UserForAuthenticationDto": {
+      "required": [
+        "email",
+        "password"
+      ],
+      "type": "object",
+      "properties": {
+        "email": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "password": {
+          "minLength": 1,
+          "type": "string"
+        }
+      }
+    },
+    "UserForRegistrationDto": {
+      "required": [
+        "password",
+        "userName"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "userName": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "roleId": {
+          "type": "string"
+        }
+      }
+    },
+    "UserListDto": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "roleName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "UserListDtoEntityResponseListModel": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserListDto"
+          }
+        }
+      }
+    },
+    "UserListDtoEntityResponseModel": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "string"
+        },
+        "data": { },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

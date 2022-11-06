@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="OnlineEnergyUtilityPlateformAPI20221104213154" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\upwork\\Alexandra\ Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

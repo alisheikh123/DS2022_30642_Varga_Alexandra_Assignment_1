@@ -71,6 +71,7 @@ export class LoginComponent implements OnInit {
          localStorage.setItem("userName", res?.data.userName);
          this.appService.sendAuthStateChangeNotification(res?.data?.isAuthSuccessful);
          this.router.navigateByUrl('main');
+         window.location.reload();
       },
       error: (err: HttpErrorResponse) => {
         this.errorMessage = err.message;

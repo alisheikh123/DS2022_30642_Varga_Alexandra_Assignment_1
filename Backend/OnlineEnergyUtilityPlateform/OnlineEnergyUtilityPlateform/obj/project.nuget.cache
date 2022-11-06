@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9XxmJX54i7pkr4BfXeHKzndMA6VIPwf6I9dpca/OLrk66G5+VNCaEQG00MYyoxtMgSe0UeAAG0Xc3XQmFIn+OA==",
+  "dgSpecHash": "35OBbj6u+FAD7VPTsY11vH6OJUHeuwFWPdIw+FVNtkJg/Ca84+8/uqqtBi8+Og/s/6e/6a7qGaW0OD7UoFj84A==",
   "success": true,
   "projectFilePath": "D:\\upwork\\Alexandra Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj",
   "expectedPackageFiles": [
@@ -79,6 +79,7 @@
     "C:\\Users\\AliRazaTahir\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\AliRazaTahir\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\AliRazaTahir\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\AliRazaTahir\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
     "C:\\Users\\AliRazaTahir\\.nuget\\packages\\microsoft.visualstudio.debugger.contracts\\17.2.0\\microsoft.visualstudio.debugger.contracts.17.2.0.nupkg.sha512",
     "C:\\Users\\AliRazaTahir\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\6.0.10\\microsoft.visualstudio.web.codegeneration.6.0.10.nupkg.sha512",
     "C:\\Users\\AliRazaTahir\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\6.0.10\\microsoft.visualstudio.web.codegeneration.core.6.0.10.nupkg.sha512",

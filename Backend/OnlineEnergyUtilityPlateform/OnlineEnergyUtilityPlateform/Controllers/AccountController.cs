@@ -204,7 +204,8 @@ namespace OnlineEnergyUtilityPlateformAPI.Controllers
                         users.FirstName = userForRegistration.FirstName;
                         users.LastName = userForRegistration.LastName;
                         users.Email = userForRegistration.Email;
-                        users.PasswordHash = userForRegistration.Password;
+                        users.PasswordHash =  _userManager.PasswordHasher.HashPassword(users, userForRegistration.Password);
+                       
                         users.UserName = userForRegistration.UserName;
                         users.Id = userForRegistration.Id;
 

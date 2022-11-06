@@ -54,6 +54,7 @@ namespace LoyallaApi
                 .SetIsOriginAllowedToAllowWildcardSubdomains()
                 .AllowAnyHeader()
                 .AllowAnyMethod();
+            corsBuilder.WithOrigins("http://20.127.152.252");
             corsBuilder.WithOrigins("*");
 
             services.AddCors(options =>
@@ -97,7 +98,7 @@ namespace LoyallaApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            if (env.IsDevelopment() || env.IsProduction())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
@@ -107,6 +108,7 @@ namespace LoyallaApi
                     //c.RoutePrefix = string.Empty;
                 });
             }
+
             app.UseCors(x => x
             .AllowAnyMethod()
             .AllowAnyHeader()

@@ -5,7 +5,7 @@ import {Gatekeeper} from 'gatekeeper-client-sdk';
 import { ApiService } from './api.service';
 import { UserForAuthenticationDto, UserForRegistrationDto } from '@/Interface/user/user-for-registration-dto';
 import { AuthResponseDto, RegistrationResponseDto } from '@/Interface/response/registration-response-dto';
-import { environment } from 'environments/environment';
+import {environment} from 'environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 
@@ -41,7 +41,7 @@ export class AppService {
       let userName  = localStorage.getItem('userName');
       return userName;
     }
-   
+
     async getProfile() {
         try {
             this.user = ""
