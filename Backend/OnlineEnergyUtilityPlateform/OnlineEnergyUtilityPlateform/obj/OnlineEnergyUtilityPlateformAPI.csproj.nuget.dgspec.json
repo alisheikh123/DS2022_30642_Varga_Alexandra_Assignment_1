@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexandra Varga\\source\\repos\\DS2022_30642_Varga_Alexandra_Assignment_1\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj": {}
+    "D:\\upwork\\Alexandra Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alexandra Varga\\source\\repos\\DS2022_30642_Varga_Alexandra_Assignment_1\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj": {
+    "D:\\upwork\\Alexandra Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexandra Varga\\source\\repos\\DS2022_30642_Varga_Alexandra_Assignment_1\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj",
+        "projectUniqueName": "D:\\upwork\\Alexandra Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj",
         "projectName": "OnlineEnergyUtilityPlateformAPI",
-        "projectPath": "C:\\Users\\Alexandra Varga\\source\\repos\\DS2022_30642_Varga_Alexandra_Assignment_1\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj",
-        "packagesPath": "C:\\Users\\Alexandra Varga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexandra Varga\\source\\repos\\DS2022_30642_Varga_Alexandra_Assignment_1\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\obj\\",
+        "projectPath": "D:\\upwork\\Alexandra Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj",
+        "packagesPath": "C:\\Users\\AliRazaTahir\\.nuget\\packages\\",
+        "outputPath": "D:\\upwork\\Alexandra Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Alexandra Varga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AliRazaTahir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
