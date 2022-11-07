@@ -44,9 +44,6 @@ export class BarchartComponent implements OnInit {
 
   }
   createChart(response:any){
-    debugger
-    console.log(response?.data.length);
-    debugger
     for(this.index=0;this.index< response?.data.length;this.index++){
       debugger
       this.chart = new Chart("MyChart", {
