@@ -30,7 +30,17 @@ export class BarchartComponent implements OnInit {
     private appService:AppService) {
     Chart.register(...registerables);
   }
-
+  public barChartOptions = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+  public barChartLabels = ['',];
+  public barChartType = 'bar';
+  public barChartLegend = true;
+  public barChartData = [
+    {data: ['0'], label: 'Hours'},
+    {data: ['0'], label: 'Energy Consumption'}
+  ];
   ngOnInit(): void {
     this.getUserId();
   }
@@ -44,37 +54,23 @@ export class BarchartComponent implements OnInit {
 
   }
   createChart(response:any){
-    for(this.index=0;this.index< response?.data.length;this.index++){
-      debugger
-      this.chart = new Chart("MyChart", {
-        type: 'bar', //this denotes tha type of chart
 
-        data: {// values on X-Axis
-          labels: [response?.data[this.index]?.createdDate],
-          //  ,'2022-05-13',
-          // 				 '2022-05-14', '2022-05-15', '2022-05-16','2022-05-17', ],
-           datasets: [
-            {
-              label: "Hours",
-              data: [response?.data[this.index]?.hours],
-              backgroundColor: 'green'
-            },
-            {
-              label: "Energy Consumption(Kwh)",
-              data: [response?.data[this.index]?.energyConsumption],
-              backgroundColor: 'skyblue'
-            }
-          ]
-        },
-        options: {
-          aspectRatio:2.3
-        }
+    this.barChartLabels = [moment(response?.data[this.index].createdDate).format('LL')];
+   this.barChartData = [
+      {data: [response?.data[0].hours], label: 'Hours'},
+      {data: [response?.data[0].energyConsumption], label: 'Energy Consumption'}
+    ];
 
-      });
-    }
+
 
   }
-
+resetGraph(){
+  this.barChartLabels = ['',];
+  this.barChartData = [
+    {data: ['0'], label: 'Hours'},
+    {data: ['0'], label: 'Energy Consumption'}
+  ];
+}
   changeDevice(event: any) {
 
     this.barchartForm.patchValue({
@@ -82,7 +78,6 @@ export class BarchartComponent implements OnInit {
     })
   }
   onSubmit(): void {
-    debugger;
     this.barchartForm.controls.creationDate.setValue(this.barchartForm.controls.creationDate.value);
     this.barchartForm.patchValue({
       userId:localStorage.getItem('userId')
@@ -102,6 +97,7 @@ console.log(this.barchartForm.value)
           }
           else{
             this.toast.warning(res?.message);
+           this.resetGraph();
           }
 
         })
