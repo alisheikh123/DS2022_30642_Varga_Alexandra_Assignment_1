@@ -11295,23 +11295,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AliRazaTahir\\.nuget\\packages\\": {},
+    "C:\\Users\\ALEXANDRA\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\upwork\\Alexandra Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj",
+      "projectUniqueName": "E:\\DS2022_30642_Varga_Alexandra_Assignment_1\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj",
       "projectName": "OnlineEnergyUtilityPlateformAPI",
-      "projectPath": "D:\\upwork\\Alexandra Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj",
-      "packagesPath": "C:\\Users\\AliRazaTahir\\.nuget\\packages\\",
-      "outputPath": "D:\\upwork\\Alexandra Varga\\DS2022_Group_LastName_FirstName_Assignment_Number\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\obj\\",
+      "projectPath": "E:\\DS2022_30642_Varga_Alexandra_Assignment_1\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateformAPI.csproj",
+      "packagesPath": "C:\\Users\\ALEXANDRA\\.nuget\\packages\\",
+      "outputPath": "E:\\DS2022_30642_Varga_Alexandra_Assignment_1\\Backend\\OnlineEnergyUtilityPlateform\\OnlineEnergyUtilityPlateform\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\AliRazaTahir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ALEXANDRA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -11320,6 +11320,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
