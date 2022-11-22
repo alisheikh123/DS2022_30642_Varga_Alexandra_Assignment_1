@@ -16,7 +16,7 @@ export class BarchartComponent implements OnInit {
   isSubmitted = false;
   userDevices:any;
   index:number=0;
-  barchartForm = this.fb.group({
+barchartForm = this.fb.group({
     userId: ['', ],
     deviceId: ['', [Validators.required]],
     creationDate:['',[Validators.required]]

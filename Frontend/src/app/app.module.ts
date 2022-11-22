@@ -47,6 +47,9 @@ import { NotFoundComponent } from './common/not-found/not-found.component';
 import { ViewDevicesListComponent } from './modules/View/view-devices-list/view-devices-list.component';
 import { DateFormatPipe } from './pip/date-format.pipe';
 import { NgChartsModule } from 'ng2-charts';
+import CanvasJS from 'canvasjs';
+import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component';
+var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 defineCustomElements();
 registerLocaleData(localeEn, 'en-EN');
 
@@ -82,7 +85,7 @@ registerLocaleData(localeEn, 'en-EN');
         NotFoundComponent,
         ViewDevicesListComponent,
         DateFormatPipe,
-
+        CanvasJSChart
     ],
     imports: [
         BrowserModule,
@@ -107,7 +110,8 @@ registerLocaleData(localeEn, 'en-EN');
           { path: '', redirectTo: '/', pathMatch: 'full' },
           { path: '**', redirectTo: '/404', pathMatch: 'full'}
       ]),
-      NgChartsModule
+      NgChartsModule,
+
 
     ],
     exports: [

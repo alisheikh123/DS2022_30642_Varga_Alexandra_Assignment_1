@@ -1,6 +1,12 @@
 import { AppService } from '@/shared/services/app.service';
+import { SignalRService } from '@/shared/services/signal-r.service';
 import {Component} from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+import { Chart } from 'chart.js';
+import { ChartModel } from '@/Interface/response/ChartModel';
+import { Injectable } from '@angular/core';
+import * as signalR from '@aspnet/signalr'
+import { ApiService } from '@/shared/services/api.service';
 
 @Component({
     selector: 'app-dashboard',
@@ -9,15 +15,106 @@ import {Component} from '@angular/core';
 })
 export class DashboardComponent {
 isAdmin:boolean=false;
-  /**
-   *
-   */
-  constructor(private appService:AppService) {
+ linechartData:any;
+ dataPoints:any[] = [];
+ timeout:any = null;
+ xValue:number = 1;
+ yValue:number = 10;
+ newDataCount:number = 10;
+ public data :ChartModel[];
+ chartRecord: any[] = [];
 
+ chart: any;
+ private hubConnection:signalR.HubConnection;
+ chartOptions = {
+   theme: "light2",
+   title: {
+     text: "Real Time Energy Consumption"
+   },
+   data: [{
+     type: "line",
+     dataPoints: this.dataPoints
+   }]
+ }
+  constructor(private appService:AppService,private http:HttpClient,private apiService:ApiService) { }
+
+
+  ngOnInit(): void {
+
+    this.checkRole();
+    this.getSignalR();
+  }
+  getSignalR()
+  {
+    this.startConnection();
+    this.addTransferChartDataListener();
+    this.SendHttpRequest();
+   }
+
+
+   startConnection(){
+    this.hubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:7149/chart').build();
+    this.hubConnection.start().then(()=>console.log('Connection Started')).catch(err=>console.log('Error while starting connection:'+err))
 
   }
-  ngOnInit(): void {
-    this.checkRole();
+  addTransferChartDataListener(){
+      this.hubConnection.on('transferchartdata',(data:any)=>{
+        if(data.length==0)
+        {
+        }
+        else
+        {
+
+          this.data = data;
+          this.addData(data)
+        }
+
+      });
+    }
+    SendHttpRequest(){
+      this.apiService.serviceGetConsumer('Chart').then((res)=>{
+
+      })
+    }
+
+  getChartInstance(chart: object) {
+    this.chart = chart;
+    this.addTransferChartDataListener();
+  }
+
+  ngOnDestroy() {
+
+    clearTimeout(this.timeout);
+  }
+
+
+  addData = (data:any) => {
+    console.log(this.chartRecord)
+    if(this.chartRecord.length!=data[0]['count']){
+      if(data.length>0) {
+        data.forEach( (val:any[]) => {
+          this.dataPoints.push({x: new Date(val['currentDate']), y: parseInt(val['energyConsumption'])});
+        })
+      } else {
+        this.dataPoints.shift();
+        this.dataPoints.push({x: new Date(data[0]['currentDate']), y: parseInt(data[0]['energyConsumption'])});
+        this.yValue = parseInt(data[0]['energyConsumption']);
+      }
+      this.chart.render();
+      this.chartRecord.push(data);
+      console.log(this.chartRecord)
+      this.timeout = setTimeout(this.addTransferChartDataListener, 6000);
+    }
+    else{
+      // here add Database record
+      console.log("Yahan Database myn record save karwana hy ")
+
+      this.hubConnection.stop();
+      this.apiService.servicePost('AfterMappingStoredHourEnergies/ConsumerEngergyConsumption',this.chartRecord).then(()=>{
+
+      })
+    }
+
   }
   checkRole(){
     let role = this.appService.getRole();

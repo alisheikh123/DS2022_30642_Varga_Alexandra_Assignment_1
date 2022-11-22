@@ -1,0 +1,51 @@
+using ConsumerWebAPI.Controllers;
+using ConsumerWebAPI.Extention;
+using ConsumerWebAPI.HubConfig;
+using Microsoft.AspNetCore.Cors.Infrastructure;
+
+var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddCors();
+builder.Services.AddSwaggerGen();
+var corsBuilder = new CorsPolicyBuilder();
+corsBuilder.AllowAnyHeader();
+corsBuilder.AllowAnyMethod();
+corsBuilder.AllowAnyOrigin(); // For anyone access.
+corsBuilder.WithOrigins("http://localhost:4200"); // for a specific url. Don't add a forward slash on the end!
+corsBuilder.WithOrigins("https://*.maersk.com")
+    .SetIsOriginAllowedToAllowWildcardSubdomains()
+    .AllowAnyHeader()
+    .AllowAnyMethod();
+corsBuilder.WithOrigins("http://20.127.152.252");
+corsBuilder.WithOrigins("*");
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorePolicy", corsBuilder.Build());
+});
+builder.Services.AddSignalR();
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true) // allow any origin
+    .AllowCredentials());
+app.UseHttpsRedirection();
+app.UseRouting();
+app.UseCors("CorePolicy");
+app.UseAuthorization();
+
+app.MapControllers();
+app.MapHub<ChartHub>("/chart");
+app.Run();

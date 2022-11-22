@@ -87,6 +87,38 @@ namespace OnlineEnergyUtilityPlateformAPI.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetAfterMappingStoredHourEnergy", new { id = afterMappingStoredHourEnergy.Id }, afterMappingStoredHourEnergy);
+        }  
+        [Route("ConsumerEngergyConsumption"),HttpPost]
+        public async Task<IActionResult> ConsumerEngergyConsumption([FromBody] ConsumerEnergyDTO[] model)
+        {
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+            else
+            {
+
+
+                AfterMappingStoredHourEnergy obj = new AfterMappingStoredHourEnergy();
+                foreach (var item in model)
+                {
+                    obj.Hours =obj.Hours+ Convert.ToDouble(item.Hours);
+                    obj.EnergyConsumption = (Convert.ToDouble(obj.EnergyConsumption) + Convert.ToDouble(item.EnergyConsumption)).ToString();
+                    obj.CreatedDate = item.currentDate;
+                    obj.UserId = item.UserId;
+                    obj.DeviceId = Convert.ToInt32(item.DeviceId);
+                }
+                //obj.EnergyConsumption = item.EnergyConsumption;
+              
+                //obj.Hours = Convert.ToDouble(item.Hours);
+
+                _context.AfterMappingStoredHourEnergy.Add(obj);
+                await _context.SaveChangesAsync();
+
+            }
+
+
+            return Ok();
         }
         [HttpGet("GenerateReport")]
         public EntityResponseModel<ReportDtoModel> GetReport(Guid? userId,string? deviceId,DateTime? creationDate)

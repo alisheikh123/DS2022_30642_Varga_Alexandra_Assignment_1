@@ -1,0 +1,52 @@
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Smart Metering Device Simulator.exe.config
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Smart Metering Device Simulator.exe
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Smart Metering Device Simulator.pdb
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\CsvHelper.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\EPPlus.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\EPPlus.Interfaces.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\EPPlus.System.Drawing.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\ExcelDataReader.DataSet.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\ExcelDataReader.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Microsoft.Bcl.HashCode.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Newtonsoft.Json.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\RabbitMQ.Client.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Buffers.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Memory.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Numerics.Vectors.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Text.Encodings.Web.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Text.Json.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Threading.Channels.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.ValueTuple.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\CsvHelper.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\EPPlus.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\ExcelDataReader.pdb
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\ExcelDataReader.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\ExcelDataReader.DataSet.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Microsoft.Bcl.HashCode.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\Newtonsoft.Json.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\RabbitMQ.Client.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Buffers.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Memory.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Numerics.Vectors.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Text.Encodings.Web.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Text.Json.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Threading.Channels.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\bin\Debug\System.ValueTuple.xml
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\obj\Debug\Smart Metering Device Simulator.csproj.AssemblyReference.cache
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\obj\Debug\Smart Metering Device Simulator.csproj.SuggestedBindingRedirects.cache
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\obj\Debug\Smart_Metering_Device_Simulator.Form1.resources
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\obj\Debug\Smart_Metering_Device_Simulator.Properties.Resources.resources
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\obj\Debug\Smart Metering Device Simulator.csproj.GenerateResource.cache
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\obj\Debug\Smart Metering Device Simulator.csproj.CoreCompileInputs.cache
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\obj\Debug\Smart Metering Device Simulator.csproj.CopyComplete
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\obj\Debug\Smart Metering Device Simulator.exe
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\Smart Metering Device Simulator\obj\Debug\Smart Metering Device Simulator.pdb
