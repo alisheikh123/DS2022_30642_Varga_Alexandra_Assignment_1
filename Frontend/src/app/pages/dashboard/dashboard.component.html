@@ -21,7 +21,7 @@
 
 <!-- Main content -->
 <section class="content">
-<button class="btn btn-primary" (click)="getSignalR()">Get Graph</button>
+
     <div class="container card card-outline card-primary" *ngIf="isAdmin===false">
       <div class="card-header text-center">
           <a [routerLink]="['/']" class="h1">Calculate Hours & Energy Consumption against User</a>
@@ -35,7 +35,7 @@
     </div>
 </section>
 <section class="content">
-
+  <!-- <button class="btn btn-primary" (click)="getSignalR()">Get Graph</button> -->
   <div class="container card card-outline card-primary" *ngIf="isAdmin===false">
     <div class="card-header text-center">
     </div>

@@ -7,6 +7,7 @@ import { ChartModel } from '@/Interface/response/ChartModel';
 import { Injectable } from '@angular/core';
 import * as signalR from '@aspnet/signalr'
 import { ApiService } from '@/shared/services/api.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
     selector: 'app-dashboard',
@@ -22,7 +23,7 @@ isAdmin:boolean=false;
  yValue:number = 10;
  newDataCount:number = 10;
  public data :ChartModel[];
- chartRecord: any[] = [];
+ chartRecord: any = [];
 
  chart: any;
  private hubConnection:signalR.HubConnection;
@@ -36,13 +37,12 @@ isAdmin:boolean=false;
      dataPoints: this.dataPoints
    }]
  }
-  constructor(private appService:AppService,private http:HttpClient,private apiService:ApiService) { }
+  constructor(private appService:AppService,private http:HttpClient,private apiService:ApiService,private _toast:ToastrService) { }
 
 
   ngOnInit(): void {
 
     this.checkRole();
-    this.getSignalR();
   }
   getSignalR()
   {
@@ -59,8 +59,10 @@ isAdmin:boolean=false;
   }
   addTransferChartDataListener(){
       this.hubConnection.on('transferchartdata',(data:any)=>{
-        if(data.length==0)
+
+        if(data.length==0 || data[0] == null)
         {
+          debugger
         }
         else
         {
@@ -79,7 +81,7 @@ isAdmin:boolean=false;
 
   getChartInstance(chart: object) {
     this.chart = chart;
-    this.addTransferChartDataListener();
+    this.getSignalR()
   }
 
   ngOnDestroy() {
@@ -87,10 +89,7 @@ isAdmin:boolean=false;
     clearTimeout(this.timeout);
   }
 
-
-  addData = (data:any) => {
-    console.log(this.chartRecord)
-    if(this.chartRecord.length!=data[0]['count']){
+  addData = (data:any={}) => {
       if(data.length>0) {
         data.forEach( (val:any[]) => {
           this.dataPoints.push({x: new Date(val['currentDate']), y: parseInt(val['energyConsumption'])});
@@ -101,19 +100,19 @@ isAdmin:boolean=false;
         this.yValue = parseInt(data[0]['energyConsumption']);
       }
       this.chart.render();
-      this.chartRecord.push(data);
-      console.log(this.chartRecord)
-      this.timeout = setTimeout(this.addTransferChartDataListener, 6000);
-    }
-    else{
-      // here add Database record
-      console.log("Yahan Database myn record save karwana hy ")
+      this.chartRecord.push(this.data[0]);
+      if(this.chartRecord.length==data[0]['count']-1){
+        this.hubConnection.stop();
+        this._toast.success("Energy consumption data successfully Added.");
+        this.apiService.servicePost('AfterMappingStoredHourEnergies/ConsumerEngergyConsumption',this.chartRecord).then(()=>{
 
-      this.hubConnection.stop();
-      this.apiService.servicePost('AfterMappingStoredHourEnergies/ConsumerEngergyConsumption',this.chartRecord).then(()=>{
+        })
+      }
+      else{
+      this.timeout = setTimeout(this.addTransferChartDataListener, 12000);
+      // this.timeout = setTimeout(this.addTransferChartDataListener, 66000);
+      }
 
-      })
-    }
 
   }
   checkRole(){

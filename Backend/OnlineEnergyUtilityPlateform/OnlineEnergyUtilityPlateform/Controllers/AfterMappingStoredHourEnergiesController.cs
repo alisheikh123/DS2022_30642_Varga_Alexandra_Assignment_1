@@ -89,7 +89,7 @@ namespace OnlineEnergyUtilityPlateformAPI.Controllers
             return CreatedAtAction("GetAfterMappingStoredHourEnergy", new { id = afterMappingStoredHourEnergy.Id }, afterMappingStoredHourEnergy);
         }  
         [Route("ConsumerEngergyConsumption"),HttpPost]
-        public async Task<IActionResult> ConsumerEngergyConsumption([FromBody] ConsumerEnergyDTO[] model)
+        public async Task<IActionResult> ConsumerEngergyConsumption([FromBody] List<ConsumerEnergyDTO> model)
         {
             if (model == null)
             {
@@ -108,10 +108,6 @@ namespace OnlineEnergyUtilityPlateformAPI.Controllers
                     obj.UserId = item.UserId;
                     obj.DeviceId = Convert.ToInt32(item.DeviceId);
                 }
-                //obj.EnergyConsumption = item.EnergyConsumption;
-              
-                //obj.Hours = Convert.ToDouble(item.Hours);
-
                 _context.AfterMappingStoredHourEnergy.Add(obj);
                 await _context.SaveChangesAsync();
 

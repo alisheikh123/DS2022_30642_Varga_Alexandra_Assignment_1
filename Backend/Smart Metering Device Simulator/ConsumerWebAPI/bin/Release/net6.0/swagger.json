@@ -1,0 +1,21 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "ConsumerWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Chart": {
+      "get": {
+        "tags": [
+          "Chart"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}

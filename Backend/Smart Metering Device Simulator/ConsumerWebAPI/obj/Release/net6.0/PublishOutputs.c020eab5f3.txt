@@ -1,0 +1,15 @@
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\ConsumerWebAPI.exe
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\ConsumerWebAPI.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\ConsumerWebAPI.deps.json
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\ConsumerWebAPI.runtimeconfig.json
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\ConsumerWebAPI.pdb
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Configuration.NewtonsoftJson.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\RabbitMQ.Client.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\RestSharp.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
