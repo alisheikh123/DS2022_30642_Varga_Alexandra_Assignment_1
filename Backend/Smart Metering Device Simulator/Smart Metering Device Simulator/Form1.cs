@@ -1,5 +1,6 @@
 ﻿using CsvHelper;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using OfficeOpenXml;
 using RabbitMQ.Client;
 using Smart_Metering_Device_Simulator.Model;
@@ -8,14 +9,19 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Dynamic;
 using System.Globalization;
 using System.IO;
+
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.Remoting.Contexts;
+using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Smart_Metering_Device_Simulator
@@ -30,33 +36,63 @@ namespace Smart_Metering_Device_Simulator
         AddEngergyConsumptionDto obj = new AddEngergyConsumptionDto();
         private async void button1_Click(object sender, EventArgs e)
         {
-            // Create List of Dropdown
-
             List<UserName> usersList = new List<UserName>();
-            List<Device> devicesList = new List<Device>();
+            using (var client = new HttpClient())
+            {
+                
+                string url = "https://localhost:44328/api/accounts/GetUsersdesktop";
+                using (var response = await client.GetAsync(url))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var fileJsonString = await response.Content.ReadAsStringAsync();
+                        
+                         var result = JsonConvert.DeserializeObject<object>(fileJsonString).ToString();
+                         var objResponse = JsonConvert.DeserializeObject<List<RetrieveMultipleResponse>>(result);
+                        
+                        
+                        foreach (var item in objResponse)
+                        {
+                            if (item.RoleName=="Client")
+                            {
+                                usersList.Add(new UserName() { Id = item.Id.ToString(), UserNm = item.UserName });
+                            }
+                        }
 
-            usersList.Add(new UserName() { Id = "4b62ef58-6e0f-4678-bf99-af486d4cfa00", UserNm = "Alexendra Loana" });
-            usersList.Add(new UserName() { Id = "0d238ff9-f48a-4152-a873-97db74b4996c", UserNm = "Ali" });
+
+                    }
+                }
+            }
 
 
-            devicesList.Add(new Device() { Id = "3", DeviceNm = "Register" });
-            devicesList.Add(new Device() { Id = "4", DeviceNm = "Mobile" });
-            devicesList.Add(new Device() { Id = "2", DeviceNm = "Song " });
-            devicesList.Add(new Device() { Id = "1", DeviceNm = "Headphones" });
+
+
+
+
+           
+            
+
+          
+
+
+            //devicesList.Add(new Device() { Id = "3", DeviceNm = "Register" });
+            //devicesList.Add(new Device() { Id = "4", DeviceNm = "Mobile" });
+            //devicesList.Add(new Device() { Id = "2", DeviceNm = "Song " });
+            //devicesList.Add(new Device() { Id = "1", DeviceNm = "Headphones" });
 
             // Assign to specific combobox
-            cboDevice.Items.Clear();
+            //cboDevice.Items.Clear();
             cboUserName.Items.Clear();
 
 
             cboUserName.DataSource = usersList;
             cboUserName.ValueMember = "Id";
             cboUserName.DisplayMember = "UserNm";
+            
 
-
-            cboDevice.DataSource = devicesList;
-            cboDevice.ValueMember = "Id";
-            cboDevice.DisplayMember = "DeviceNm";
+            //cboDevice.DataSource = devicesList;
+            //cboDevice.ValueMember = "Id";
+            //cboDevice.DisplayMember = "DeviceNm";
 
 
            
@@ -65,9 +101,40 @@ namespace Smart_Metering_Device_Simulator
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+         private async void afterSelectUserName(UserName userDetail)
         {
+           
+            List<Device> devicesList = new List<Device>();
+            using (var client = new HttpClient())
+            {
 
+                string url = "https://localhost:44328/api/DeviceTbls/GetDevicesDesktop/"+ userDetail.Id;
+                using (var response = await client.GetAsync(url))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var JsonString = await response.Content.ReadAsStringAsync();
+
+                        var result = JsonConvert.DeserializeObject<object>(JsonString).ToString();
+                        var objResponse = JsonConvert.DeserializeObject<List<RetrieveMultipleDeviceResponse>>(result);
+
+
+                        foreach (var item in objResponse)
+                        {
+                                devicesList.Add(new Device() { Id = item.Id.ToString(), DeviceNm = item.Description });
+                        }
+
+
+                    }
+                }
+
+               
+
+
+                cboDevice.DataSource = devicesList;
+                cboDevice.ValueMember = "Id";
+                cboDevice.DisplayMember = "DeviceNm";
+            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -82,8 +149,11 @@ namespace Smart_Metering_Device_Simulator
 
         private void cboUserName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UserName usObject = (UserName)cboUserName.SelectedItem;
             lblValue.Text= cboUserName.Text;
             obj.UserId = cboUserName.SelectedValue.ToString();
+
+            afterSelectUserName(usObject);
         }
 
         private void cboDevice_SelectedIndexChanged(object sender, EventArgs e)

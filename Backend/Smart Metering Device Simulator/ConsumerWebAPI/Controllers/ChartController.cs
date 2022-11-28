@@ -19,6 +19,8 @@ namespace ConsumerWebAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            //var userId = "a68686a7-df5c-48e3-bda7-41d7782e71f5";
+            //var timerManager = new TimerManager(() => _hub.Clients.User(userId).SendAsync("transferchartdata", DataManager.GetData()));
             var timerManager = new TimerManager(() => _hub.Clients.All.SendAsync("transferchartdata", DataManager.GetData()));
             return Ok();
         }

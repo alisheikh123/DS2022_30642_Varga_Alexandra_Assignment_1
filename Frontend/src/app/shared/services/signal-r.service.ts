@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as signalR from '@aspnet/signalr'
 import { ChartModel } from '@/Interface/response/ChartModel';
+import { environment } from 'environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +10,7 @@ public data :ChartModel[];
 private hubConnection:signalR.HubConnection;
 
 public startConnection = () =>{
-  this.hubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:7149/chart').build();
+  this.hubConnection = new signalR.HubConnectionBuilder().withUrl(environment.API2_URL_PREFIX+'chart').build();
   this.hubConnection.start().then(()=>console.log('Connection Started')).catch(err=>console.log('Error while starting connection:'+err))
 
 }

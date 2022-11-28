@@ -21,7 +21,7 @@ export class ApiService {
   // Generic service of post for login
   private readonly AccountController: string = 'account';
   private readonly route: string = environment.API_URL_PREFIX + '/';  //"http://localhost:5009/api/";
-  private readonly route2: string = environment.API2_URL_PREFIX + '/';
+  private readonly route2: string = environment.API2_URL_PREFIX;
 
   new(method: string, body: any) {
     if (method !== '') {
@@ -70,7 +70,8 @@ export class ApiService {
   }
   async serviceGetConsumer(method: string) {
     try {
-      let url = this.route2.concat(method);
+debugger
+      let url = this.route2.concat('api/'+method);
       let response: any = await firstValueFrom(this.http
         .get(url, {
           headers: new HttpHeaders({

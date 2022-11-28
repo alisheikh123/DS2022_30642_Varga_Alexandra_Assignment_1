@@ -34,3 +34,11 @@ D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Back
 D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\ConsumerWebAPI.pdb
 D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\ConsumerWebAPI.genruntimeconfig.cache
 D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\obj\Release\net6.0\ref\ConsumerWebAPI.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\bin\Release\net6.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\bin\Release\net6.0\Microsoft.Azure.SignalR.Common.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\bin\Release\net6.0\Microsoft.Azure.SignalR.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\bin\Release\net6.0\Microsoft.Azure.SignalR.Protocols.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\upwork\Alexandra Varga\DS2022_Group_LastName_FirstName_Assignment_Number\Backend\Smart Metering Device Simulator\ConsumerWebAPI\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll

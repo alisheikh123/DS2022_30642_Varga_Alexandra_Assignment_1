@@ -8,6 +8,7 @@ import { Injectable } from '@angular/core';
 import * as signalR from '@aspnet/signalr'
 import { ApiService } from '@/shared/services/api.service';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from 'environments/environment';
 
 @Component({
     selector: 'app-dashboard',
@@ -43,6 +44,7 @@ isAdmin:boolean=false;
   ngOnInit(): void {
 
     this.checkRole();
+
   }
   getSignalR()
   {
@@ -53,7 +55,7 @@ isAdmin:boolean=false;
 
 
    startConnection(){
-    this.hubConnection = new signalR.HubConnectionBuilder().withUrl('https://localhost:7149/chart').build();
+    this.hubConnection = new signalR.HubConnectionBuilder().withUrl(environment.API2_URL_PREFIX+'chart').build();
     this.hubConnection.start().then(()=>console.log('Connection Started')).catch(err=>console.log('Error while starting connection:'+err))
 
   }
@@ -62,7 +64,7 @@ isAdmin:boolean=false;
 
         if(data.length==0 || data[0] == null)
         {
-          debugger
+
         }
         else
         {
@@ -88,6 +90,9 @@ isAdmin:boolean=false;
 
     clearTimeout(this.timeout);
   }
+reload(){
+  window.location.reload();
+}
 
   addData = (data:any={}) => {
       if(data.length>0) {
@@ -101,7 +106,9 @@ isAdmin:boolean=false;
       }
       this.chart.render();
       this.chartRecord.push(this.data[0]);
-      if(this.chartRecord.length==data[0]['count']-1){
+      // here add logic of request
+      // localStorage.setItem("dataCount", );
+      if(this.chartRecord.length==data[0]['count']){
         this.hubConnection.stop();
         this._toast.success("Energy consumption data successfully Added.");
         this.apiService.servicePost('AfterMappingStoredHourEnergies/ConsumerEngergyConsumption',this.chartRecord).then(()=>{
@@ -110,7 +117,6 @@ isAdmin:boolean=false;
       }
       else{
       this.timeout = setTimeout(this.addTransferChartDataListener, 12000);
-      // this.timeout = setTimeout(this.addTransferChartDataListener, 66000);
       }
 
 

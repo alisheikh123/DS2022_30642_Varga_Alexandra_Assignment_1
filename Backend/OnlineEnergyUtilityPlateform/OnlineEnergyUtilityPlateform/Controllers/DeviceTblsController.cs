@@ -49,6 +49,25 @@ namespace OnlineEnergyUtilityPlateformAPI.Controllers
             return response;
         }
 
+
+        [HttpGet("GetDevicesDesktop/{userId}")]
+        public List<DeviceTbl> GetDevicesDesktop(Guid? userId)
+        {
+
+            List<DeviceTbl> objList = new List<DeviceTbl>();
+            var response = new List<DeviceTbl>();
+            if (userId != null)
+            {
+                var getDeviceIds = _context.UserDeviceMappingTbls.Where(x => x.UserId == userId).Select(x => x.DeviceId).ToList();
+                foreach (var item in getDeviceIds)
+                {
+                    var deviceDetail = _context.DeviceTbls.Where(x => x.id == item).FirstOrDefault();
+                    objList.Add(deviceDetail);
+                }
+            }
+            response = objList;
+            return response;
+        }
         // GET: api/DeviceTbls
         [HttpGet]
         public async Task<ActionResult<IEnumerable<DeviceTbl>>> GetDeviceTbls()

@@ -157,6 +157,54 @@ namespace OnlineEnergyUtilityPlateformAPI.Controllers
             return response;
         }
 
+        [HttpGet("GetUsersdesktop")]
+        public List<UserListDto> GetUsersdesktop()
+        {
+            var response = new List<UserListDto>();
+            List<UserListDto> userListDtos = new List<UserListDto>();
+            UserListDto userListObject = new UserListDto();
+            var userList = _context.Users.ToList();
+            var userRoleList = (from u in userList
+                                join r in _context.UserRoles on
+                                u.Id equals r.UserId
+                                orderby u.Id
+                                select new
+                                {
+                                    u.Id,
+                                    u.FirstName,
+                                    u.LastName,
+                                    u.Email,
+                                    u.UserName,
+                                    r.RoleId
+                                }).ToList();
+            var userlistWithRoleName = (from l in userRoleList
+                                        join rol in _context.Roles on
+                                        l.RoleId equals rol.Id
+                                        orderby l.Id
+                                        select new
+                                        {
+                                            l.Id,
+                                            l.FirstName,
+                                            l.UserName,
+                                            l.LastName,
+                                            l.Email,
+                                            rol.Name
+                                        }).ToList();
+            for (int i = 0; i < userlistWithRoleName.Count; i++)
+            {
+                userListDtos.Add(new UserListDto
+                {
+                    Id = userlistWithRoleName[i].Id,
+                    FirstName = userlistWithRoleName[i].FirstName,
+                    LastName = userlistWithRoleName[i].LastName,
+                    Email = userlistWithRoleName[i].Email,
+                    UserName = userlistWithRoleName[i].UserName,
+                    RoleName = userlistWithRoleName[i].Name,
+                });
+            }
+            response = userListDtos;
+            return response;
+        }
         [HttpPost("registration")]
         public async Task<EntityResponseListModel<string>> RegisterUser([FromBody] UserForRegistrationDto userForRegistration)
         {
