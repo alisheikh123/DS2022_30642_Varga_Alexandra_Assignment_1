@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineEnergyUtilityPlatefor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsumerWebAPI", "ConsumerWebAPI\ConsumerWebAPI.csproj", "{2D232851-9445-4AD4-A0B2-B7B139E0D5D6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "Consumer\Consumer.csproj", "{43AB86D0-A00C-4ABA-9895-2B2BB4E0210B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{2D232851-9445-4AD4-A0B2-B7B139E0D5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D232851-9445-4AD4-A0B2-B7B139E0D5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D232851-9445-4AD4-A0B2-B7B139E0D5D6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43AB86D0-A00C-4ABA-9895-2B2BB4E0210B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43AB86D0-A00C-4ABA-9895-2B2BB4E0210B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43AB86D0-A00C-4ABA-9895-2B2BB4E0210B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43AB86D0-A00C-4ABA-9895-2B2BB4E0210B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
